@@ -1,0 +1,21 @@
+/* 
+# Hello! Hope I am making this clear enough so you can modify it to your needs
+
+# -------- About me --------- #
+# author = Emiliano Samario   #
+# github username = celepharn #
+# mail = celephrn@hotmail.com #
+# --------------------------- #
+
+Also, check de documentation!
+https://github.com/Alexays/Waybar/wiki
+*/
+{
+	/* settings and defining what modules we want being displayed */
+	"gtk-layer-shell": true,
+	"layer": top,
+	"modules-left": ["custom/launcher", "cpu", "temperature", "memory"],
+	"modules-center": ["wlr/workspaces"],
+	"modules-right": ["backlight", "pulseaudio", "network", "battery", "clock", "custom/power],
+	"height": 22,
+}
