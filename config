@@ -20,16 +20,31 @@ https://github.com/Alexays/Waybar/wiki
 	"height": 22,
 
 	/* module configuration */
-	"pulseaudio": {
-		"tooltip": false,
-		"scroll-step": 5,
-		"format": "{icon} {volume}%",
-		"format-muter": " 婢 muted",
-                "format-icons": {
-			"default": ["", "奔", "墳"]
-		},
-		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle"
-	},
+    	"custom/launcher":{
+        	"format": " ",
+        	"tooltip": false,
+        	"on-click": "bash ~/.config/polybar/blocks/scripts//launcher.sh",
+        	"on-click-right": "killall rofi"
+    	},
+    	"cpu": {
+     		"interval": 5,
+        	"format": " {usage}%",
+        	"max-length": 10
+    	},
+    	"temperature": {
+       		"interval": 5,
+        	"tooltip": false,
+        	"format": " {temperatureC}°C",
+        	"max-length": 10,
+        	"thermal-zone": 1,
+        	"input-filename": "temp1_input",
+        	"hwon-path": "sys/devices/platform/coretemp.0/hwon/hwon5/temp1_input"
+    	},
+    	"memory": {
+        	"interval": 10,
+        	"format": " {}%",
+        	"max-length": 10
+    	},
         "wlr/workspaces": {
 		"format": "{icon}",
           	"format-icons": {
@@ -47,6 +62,32 @@ https://github.com/Alexays/Waybar/wiki
 		},
           	"on-click": "activate"
         },
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1,
+        	"on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5" */
+       		"interval": 2,
+        	"align": 0,
+        	"rotate": 0,
+        	"format": "{icon} {percent}%",
+        	"format-icons": ["", "", "", ""],
+        	"on-click": "",
+        	"on-scroll-up": "light -A 5%",
+        	"on-scroll-down": "light -U 5%",
+        	"smooth-scrolling-threshold": 1
+	},
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-muter": " 婢 muted",
+                "format-icons": {
+			"default": ["", "奔", "墳"]
+		},
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+	},
 	"network": {
 		"tooltip": false,
                 "format-wifi": "{icon} {essid}",
@@ -64,22 +105,6 @@ https://github.com/Alexays/Waybar/wiki
                 },
                 "on-click": "bash ~/.config/rofi-theme-sunset/scripts/wifimenu.sh"
 	},
-	"backlight": {
-		"tooltip": false,
-		"format": " {}%",
-		"interval":1,
-        	"on-scroll-up": "light -A 5",
-		"on-scroll-down": "light -U 5" */
-       		"interval": 2,
-        	"align": 0,
-        	"rotate": 0,
-        	"format": "{icon} {percent}%",
-        	"format-icons": ["", "", "", ""],
-        	"on-click": "",
-        	"on-scroll-up": "light -A 5%",
-        	"on-scroll-down": "light -U 5%",
-        	"smooth-scrolling-threshold": 1
-	},
     	"battery": {
         	"states": {
             		"good": 95,
@@ -91,40 +116,15 @@ https://github.com/Alexays/Waybar/wiki
         	"format-plugged": " {capacity}%",
        		"format-alt": "{time} {icon}",
         	"format-icons": ["", "", "", "", ""]
-    },
-    "clock": {
+    	},
+    	"clock": {
 		"format": "{: %H:%M }",
        		"format-alt": "{: %a, %d %b}"
-    },
-    "temperature": {
-       		"interval": 5,
-        	"tooltip": false,
-        	"format": " {temperatureC}°C",
-        	"max-length": 10,
-        	"thermal-zone": 1,
-        	"input-filename": "temp1_input",
-        	"hwon-path": "sys/devices/platform/coretemp.0/hwon/hwon5/temp1_input"
-    },
-    "cpu": {
-     		"interval": 5,
-        	"format": " {usage}%",
-        	"max-length": 10
-    },
-    "memory": {
-        	"interval": 10,
-        	"format": " {}%",
-        	"max-length": 10
-    },
-    "custom/launcher":{
-        	"format": " ",
-        	"tooltip": false,
-        	"on-click": "bash ~/.config/polybar/blocks/scripts//launcher.sh",
-        	"on-click-right": "killall rofi"
-    },
-    "custom/power":{
+    	},
+    	"custom/power":{
         	"tooltip": false,
         	"font": "Awesome",
         	"format": "",
         	"on-click": "bash ~/.config/polybar/blocks/scripts/powermenu.sh"
-    },
+    	},
 }
