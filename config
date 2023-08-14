@@ -18,4 +18,113 @@ https://github.com/Alexays/Waybar/wiki
 	"modules-center": ["wlr/workspaces"],
 	"modules-right": ["backlight", "pulseaudio", "network", "battery", "clock", "custom/power],
 	"height": 22,
+
+	/* module configuration */
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-muter": " 婢 muted",
+                "format-icons": {
+			"default": ["", "奔", "墳"]
+		},
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+	},
+        "wlr/workspaces": {
+		"format": "{icon}",
+          	"format-icons": {
+          	"1": "",
+          	"2": "",
+          	"3": "",
+          	"4": "",
+          	"5": "",
+          	"6": "",
+          	"7": "",
+          	"8": "",
+          	"9": "",
+          	"10": "",
+          	"default": ""
+		},
+          	"on-click": "activate"
+        },
+	"network": {
+		"tooltip": false,
+                "format-wifi": "{icon} {essid}",
+                "format-alt": "{icon}",
+                "format-alt-click": "click-right",
+                "format-disconnected": "{icon} offline",
+                "margin-top": 9,
+                "margin-bottom": 9,
+                "margin-right": 9,
+                "margin-left": 9,
+                "format-icons": {
+			"wifi": [""],
+                  	"ethernet": [""],
+                  	"disconnected": ["睊"]
+                },
+                "on-click": "bash ~/.config/rofi-theme-sunset/scripts/wifimenu.sh"
+	},
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1,
+        	"on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5" */
+       		"interval": 2,
+        	"align": 0,
+        	"rotate": 0,
+        	"format": "{icon} {percent}%",
+        	"format-icons": ["", "", "", ""],
+        	"on-click": "",
+        	"on-scroll-up": "light -A 5%",
+        	"on-scroll-down": "light -U 5%",
+        	"smooth-scrolling-threshold": 1
+	},
+    	"battery": {
+        	"states": {
+            		"good": 95,
+            		"warning": 30,
+            		"critical": 20
+		},
+        	"format": "{icon} {capacity}%",
+        	"format-charging": " {capacity}%",
+        	"format-plugged": " {capacity}%",
+       		"format-alt": "{time} {icon}",
+        	"format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+		"format": "{: %H:%M }",
+       		"format-alt": "{: %a, %d %b}"
+    },
+    "temperature": {
+       		"interval": 5,
+        	"tooltip": false,
+        	"format": " {temperatureC}°C",
+        	"max-length": 10,
+        	"thermal-zone": 1,
+        	"input-filename": "temp1_input",
+        	"hwon-path": "sys/devices/platform/coretemp.0/hwon/hwon5/temp1_input"
+    },
+    "cpu": {
+     		"interval": 5,
+        	"format": " {usage}%",
+        	"max-length": 10
+    },
+    "memory": {
+        	"interval": 10,
+        	"format": " {}%",
+        	"max-length": 10
+    },
+    "custom/launcher":{
+        	"format": " ",
+        	"tooltip": false,
+        	"on-click": "bash ~/.config/polybar/blocks/scripts//launcher.sh",
+        	"on-click-right": "killall rofi"
+    },
+    "custom/power":{
+        	"tooltip": false,
+        	"font": "Awesome",
+        	"format": "",
+        	"on-click": "bash ~/.config/polybar/blocks/scripts/powermenu.sh"
+    },
 }
