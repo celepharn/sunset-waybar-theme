@@ -4,5 +4,5 @@
 <p align="center">
   <img src="image.png" />
 </p>
-<p> Installations script incoming. 🥳 </p>
+<p> Installation script incoming. 🥳 </p>
 <p> For full functionality please install my <a href="https://github.com/celepharn/rofi-theme-sunset">rofi theme</a>. </p>
