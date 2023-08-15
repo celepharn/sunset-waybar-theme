@@ -12,21 +12,21 @@ https://github.com/Alexays/Waybar/wiki
 */
 
 * {
-	* border: none;
-	* border-radius: 3px;
+	* min-height: 10px;
 	* font-family: "Noto Sans";
 	* font-size: 10px;
-	* min-height: 10px;
+	* border: none;
+	* border-radius: 3px;
 }
 
 window#waybar {
 	background-color:transparent;
 	color: #ffffff;
+	margin: 16px 16px;
 	transition-property: background-color;
 	transition-duration: 5s;
 	border-top: 8px transparent;
 	border-radius: 8px;
-	margin: 16px 16px;
 }
 
 window#waybar.hidden {
@@ -35,22 +35,55 @@ window#waybar.hidden {
 	opacity: 0.2;
 }
 #window {
+	background: transparent;
+	color: transparent;
+	margin-top: 4px;
 	padding-left: 10px;
 	padding-right: 10px;
+	transition: none;
 }
 #tags {
+	background: #161320;
+	margin-top: 4px;
+	margin-bottom: 0px;
+	margin-left: 12px;
+	font-size: 4px;
+	transition: none;
 }
 #tags button {
+	background: transparent;
+	color: #b5e8e0;
+	font-size: 16px;
+	transition: none;
+	border-radius: 2px;
 }
 #tags button.occupied {
+	background: transparent;
+	color: #f28fad;
+	font-size: 4px;
+	transition: none;
 }
 #tags button.focused {
+	color: #abe9b3;
+	border-top: 2px solid #abe9b3;
+	border-bottom: 2px solid #abe9b3;
 }
 #tags button:hover {
+	color: #fae3b0;
+	border-color: #e8a2af;
+	transition: none;
 }
 #tags button.focused:hover {
+	color: #e8a2af;
 }
 #workspaces button {
+	background-color: #1e2021;
+	color: #b5e8e0;
+	padding: 2px 0 0 0;
+	margin: 4px 2px 0 2px;
+	font-family: feather;
+	font-size: 10px;
+	min-width: 32px;
 }
 #workspaces button:hover {
 }
