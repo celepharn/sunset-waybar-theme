@@ -1,0 +1,30 @@
+/* 
+# Hello! Hope I am making this clear enough so you can modify it to your needs
+
+# -------- About me --------- #
+# author = Emiliano Samario   #
+# github username = celepharn #
+# mail = celephrn@hotmail.com #
+# --------------------------- #
+
+Also, check de documentation!
+https://github.com/Alexays/Waybar/wiki
+*/
+
+* {
+	* border: none;
+	* border-radius: 3px;
+	* font-family: "Noto Sans";
+	* font-size: 10px;
+	* min-height: 10px;
+}
+
+window#waybar {
+	background-color:transparent;
+	color: #ffffff;
+	transition-property: background-color;
+	transition-duration: 5s;
+	border-top: 8px transparent;
+	border-radius: 8px;
+	margin: 16px 16px;
+}
