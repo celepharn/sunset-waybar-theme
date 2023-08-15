@@ -28,3 +28,76 @@ window#waybar {
 	border-radius: 8px;
 	margin: 16px 16px;
 }
+
+window#waybar.hidden {
+	padding-left: 10px;
+	padding-right: 10px;
+	opacity: 0.2;
+}
+#window {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#tags {
+}
+#tags button {
+}
+#tags button.occupied {
+}
+#tags button.focused {
+}
+#tags button:hover {
+}
+#tags button.focused:hover {
+}
+#workspaces button {
+}
+#workspaces button:hover {
+}
+#workspaces button.focused {
+}
+#workspaces button.urgent {
+}
+
+#window,
+#workspaces {
+}
+
+.modules-left > widget:first-chilt > #workspaces {
+}
+
+.modules-right > widget:first-chilt > #workspaces {
+}
+
+#network {
+}
+
+#pulseaudio {
+}
+
+#battery {
+}
+
+#backlight {
+}
+
+#clock {
+}
+
+#memory {
+}
+
+#temperature {
+}
+
+#cpu {
+}
+
+#tray {
+}
+
+#custom-launcher {
+}
+
+#custom-power {
+}
