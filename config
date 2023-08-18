@@ -13,10 +13,10 @@ https://github.com/Alexays/Waybar/wiki
 {
 	/* settings and defining what modules we want being displayed */
 	"gtk-layer-shell": true,
-	"layer": top,
+	"layer": "top",
 	"modules-left": ["custom/launcher", "cpu", "temperature", "memory"],
 	"modules-center": ["wlr/workspaces"],
-	"modules-right": ["backlight", "pulseaudio", "network", "battery", "clock", "custom/power],
+	"modules-right": ["backlight", "pulseaudio", "network", "battery", "clock", "custom/power"],
 	"height": 22,
 
 	/* module configuration */
@@ -67,7 +67,7 @@ https://github.com/Alexays/Waybar/wiki
 		"format": " {}%",
 		"interval":1,
         	"on-scroll-up": "light -A 5",
-		"on-scroll-down": "light -U 5" */
+		"on-scroll-down": "light -U 5",
        		"interval": 2,
         	"align": 0,
         	"rotate": 0,

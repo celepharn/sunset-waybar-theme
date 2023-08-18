@@ -12,11 +12,11 @@ https://github.com/Alexays/Waybar/wiki
 */
 
 * {
-	* min-height: 10px;
-	* font-family: "Noto Sans";
-	* font-size: 10px;
-	* border: none;
-	* border-radius: 3px;
+	 min-height: 10px;
+	 font-family: "Noto Sans";
+	 font-size: 10px;
+	 border: none;
+	 border-radius: 3px;
 }
 
 window#waybar {
