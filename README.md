@@ -13,6 +13,6 @@
 ## Installation ⌨️
 Before proceeding remember to back up you previous waybar config ✔️
 ```
-git clone && cp sunset-waybar-theme/waybar ~/.config/waybar
+git clone https://github.com/celepharn/sunset-waybar-theme.git && cp sunset-waybar-theme/waybar ~/.config/waybar
 ```
 <p> For full functionality please install my <a href="https://github.com/celepharn/rofi-theme-sunset">rofi theme</a>. </p>
