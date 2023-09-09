@@ -10,7 +10,7 @@
   <img src="image.png" />
 </p>
 
-## Instalation ⌨️
+## Installation ⌨️
 Before proceeding remember to back up you previous waybar config ✔️
 ```
 git clone && cp sunset-waybar-theme/waybar ~/.config/waybar
