@@ -11,7 +11,7 @@
 </p>
 
 ## Installation ⌨️
-Before proceeding remember to back up you previous waybar config ✔️
+Before proceeding remember to back up your previous waybar config ✔️
 ```
 git clone https://github.com/celepharn/sunset-waybar-theme.git && cp -r sunset-waybar-theme/waybar ~/.config/waybar
 ```
